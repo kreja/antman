@@ -1,0 +1,28 @@
+<div class="container-fluid k-container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Hello world!</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <ul class="messages">
+                        <% for(var i=0;i<messages.length;i++){ var item = messages[i]; %>
+                            <li class="message"><%= item.message %></li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form action="/messages" method="post" id="message-form">
+                        <textarea class="form-control" rows="3" id="textArea" placeholder="Insert a message" name="message"
+                            onkeydown="if (event.keyCode == 13) document.getElementById('message-form').submit();"></textarea>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
